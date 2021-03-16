@@ -8,14 +8,14 @@
 Este comando permite verificar la salud del contenedor, retornando 0 si está ok o 1 en caso contrario. 
 Puede utlizarse de dos maneras: 
 
-**HEALTHCHECK [OPTIONS] CMD command: se ejecuta el comando recibido por parametro dentro del contenedor, puede ser un script o binario donde especifiquemos el servicio que se desea verificar el estado. 
-**HEALTHCHECK NONE: desabilita las verificaciones de la imagen base
+- HEALTHCHECK [OPTIONS] CMD command: se ejecuta el comando recibido por parametro dentro del contenedor, puede ser un script o binario donde especifiquemos el servicio que se desea verificar el estado.
+- HEALTHCHECK NONE: desabilita las verificaciones de la imagen base
 
 Parametros: 
-** Interval: intervalo de tiempo en que deseamos se ejecuten los checks, default 30 segundos.
-** Timeout: tiempo espera del check hasta considerar que fallo, default 30segundos.
-** Start-period: tiempo permitido para la inicialización del contenedor a partir del cual se comenzaran a contabilizar los estados de los checks, default 0segundos.
-** Retries: cantidad de verificaciones fallidas antes de considerar al contendero unhealthy, default 3.
+* Interval: intervalo de tiempo en que deseamos se ejecuten los checks, default 30 segundos.
+* Timeout: tiempo espera del check hasta considerar que fallo, default 30segundos.
+* Start-period: tiempo permitido para la inicialización del contenedor a partir del cual se comenzaran a contabilizar los estados de los checks, default 0segundos.
+* Retries: cantidad de verificaciones fallidas antes de considerar al contendero unhealthy, default 3.
 
 
 Si se define el healthcheck al contenedor, al ejecutar ps, además de visualizar su estado tambien se informará un "estado de salud" 
